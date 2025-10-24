@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sandip Singh Sisodiya — Sr. Administrative & HR Coordinator</title>
+
+  <!-- Recommended web font (will load from Google fonts) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg: #ffffff;
+      --muted: #6b7280;
+      --accent: #1266d4; /* calm corporate blue */
+      --card: #f8f9fb;
+      --maxw: 980px;
+      --radius: 12px;
+      --shadow: 0 6px 18px rgba(16,24,40,0.06);
+      --gap: 22px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:var(--bg);
+      color:#0f172a;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:32px 18px;
+      display:flex;
+      justify-content:center;
+      align-items:flex-start;
+    }
+
+    .container{
+      width:100%;
+      max-width:var(--maxw);
+    }
+
+    header.card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.95));
+      border-radius:var(--radius);
+      padding:22px;
+      box-shadow:var(--shadow);
+      display:flex;
+      gap:var(--gap);
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .photo {
+      width:108px;
+      height:108px;
+      border-radius:999px;
+      overflow:hidden;
+      flex: 0 0 108px;
+      border: 2px solid rgba(18,102,212,0.10);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background: #eaeef6;
+    }
+    .photo img{width:100%;height:100%;object-fit:cover;display:block}
+
+    .head-info{
+      flex:1;
+      min-width:180px;
+    }
+    .name{
+      font-size:20px;
+      font-weight:700;
+      margin:0 0 6px 0;
+      letter-spacing:0.2px;
+    }
+    .title{
+      margin:0;
+      color:var(--muted);
+      font-weight:600;
+      font-size:14px;
+    }
+
+    .contact{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      margin-top:10px;
+      flex-wrap:wrap;
+    }
+    .icon-btn{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      padding:8px 10px;
+      border-radius:8px;
+      background:transparent;
+      color:var(--muted);
+      text-decoration:none;
+      font-size:13px;
+      border:1px solid rgba(15,23,42,0.04);
+    }
+    .icon {
+      width:16px;height:16px;display:inline-block;flex:0 0 16px;
+      color:var(--accent);
+    }
+
+    main{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns: 1fr 340px;
+      gap:20px;
+    }
+
+    .card-block{
+      background:var(--card);
+      border-radius:10px;
+      padding:18px;
+      box-shadow: 0 2px 10px rgba(16,24,40,0.03);
+    }
+
+    .section-title{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-bottom:12px;
+    }
+    .section-title h3{
+      margin:0;font-size:15px;color:#0f172a;font-weight:700;
+    }
+    .muted { color: var(--muted); font-size:14px; }
+
+    /* Experience list */
+    .exp-item{margin-bottom:14px;}
+    .exp-item .job{font-weight:600;}
+    .exp-item .meta{color:var(--muted);font-size:13px;margin-top:4px}
+
+    /* Right column */
+    aside .card-block{margin-bottom:16px}
+    .skill-list{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{background:white;padding:8px 10px;border-radius:8px;border:1px solid rgba(15,23,42,0.04);font-size:13px}
+
+    footer{
+      margin-top:20px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    .qr-placeholder{
+      width:88px;
+      height:88px;
+      border-radius:8px;
+      border:1px dashed rgba(15,23,42,0.08);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:#fff;
+      color:var(--muted);
+      font-size:12px;
+      text-align:center;
+      padding:8px;
+    }
+
+    /* small screens */
+    @media (max-width:880px){
+      main{grid-template-columns:1fr; }
+      .photo{width:92px;height:92px;flex:0 0 92px}
+      footer{justify-content:center}
+    }
+
+    /* small touches for link hover */
+    a.icon-btn:hover{ border-color: rgba(18,102,212,0.12); color: #073a8a }
+    a.cta{
+      display:inline-block;
+      background:var(--accent);
+      color:white;
+      padding:10px 14px;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:600;
+      font-size:14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header -->
+    <header class="card" role="banner">
+      <div class="photo" aria-hidden="true">
+        <!--
+          PHOTO: Replace the src below with your actual photo filename (e.g., "photo.jpg")
+          Option A (recommended): Upload your photo file (photo.jpg) alongside index.html in the repo,
+          then change the src to "./photo.jpg".
+          Option B (embed): Replace the src with a base64 data URI if you prefer single-file with actual image embedded.
+        -->
+        <img id="profilePhoto" src="data:image/svg+xml;utf8,
+          <svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'>
+            <rect width='100%' height='100%' fill='%23e6ecf7'/>
+            <g transform='translate(200,180)'>
+              <circle cx='0' cy='-20' r='68' fill='%23cfd9ea'/>
+              <rect x='-100' y='86' rx='16' ry='16' width='200' height='84' fill='%23dbe6f7'/>
+            </g>
+          </svg>" alt="Profile photo placeholder" />
+      </div>
+
+      <div class="head-info">
+        <h1 class="name">Sandip Singh Sisodiya</h1>
+        <p class="title">Sr. Administrative &amp; HR Coordinator</p>
+
+        <div class="contact" aria-label="Contact links">
+          <a class="icon-btn" href="mailto:sandipsinghsisodiya077@gmail.com" title="Email">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 6.5v11A2.5 2.5 0 0 0 5.5 20h13A2.5 2.5 0 0 0 21 17.5v-11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M21 6.3L12.9 12.5a2 2 0 0 1-2.2 0L3 6.3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Email
+          </a>
+
+          <a class="icon-btn" href="https://www.linkedin.com/in/sisodiya-sandipsingh-16486a202" target="_blank" rel="noopener" title="LinkedIn">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5.001 2.5 2.5 0 0 1 0-5.001zM3 9h4v11H3zM9 9h3.8v1.5h.1c.5-.9 1.8-1.8 3.6-1.8 3.9 0 4.6 2.6 4.6 6V20h-4v-5.2c0-1.2 0-2.8-1.7-2.8-1.7 0-2 1.4-2 2.7V20H9z" fill="currentColor"/>
+            </svg>
+            LinkedIn
+          </a>
+
+          <a class="icon-btn" href="https://github.com/Caustic46" target="_blank" rel="noopener" title="GitHub">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.4.8-4.1-1.6-4.1-1.6-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1 1.7.7 2.1 1 .2-.8.8-1.3 1.4-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.4 1.2-3.3-.1-.3-.5-1.6.1-3.4 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0C18 6 19 6.3 19 6.3c.6 1.8.2 3.1.1 3.4.7.9 1.2 2 1.2 3.3 0 4.5-2.7 5.5-5.3 5.8.8.7 1.5 2 1.5 4v6c0 .3.2.7.8.6A12 12 0 0 0 12 .5z" fill="currentColor"/>
+            </svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <div style="min-width:150px; text-align:right;">
+        <p style="margin:0;font-size:13px;color:var(--muted)">Ahmedabad, Gujarat</p>
+        <a class="cta" href="mailto:sandipsinghsisodiya077@gmail.com" style="margin-top:10px;display:inline-block">Contact</a>
+      </div>
+
+    </header>
+
+    <!-- Main content grid -->
+    <main>
+
+      <!-- Left: About + Experience -->
+      <section>
+        <div class="card-block" id="about">
+          <div class="section-title"><h3>About</h3></div>
+          <p class="muted" style="line-height:1.6">
+            I am an operations and administration professional who thrives on building structure, driving efficiency, and creating environments where teams and businesses can perform at their best. My career spans administration, customer relations, sales and freelance web development — where I focus on practical, results-driven solutions. I’m adaptable, curious, and dedicated to continuous improvement.
+          </p>
+        </div>
+
+        <div class="card-block" id="experience" style="margin-top:14px;">
+          <div class="section-title"><h3>Experience</h3></div>
+
+          <div class="exp-item">
+            <div class="job">Senior Administrative Officer — Firepower</div>
+            <div class="meta">Aug 2025 — Present · Greater Ahmedabad Area</div>
+            <div class="muted" style="margin-top:6px">Coordinating daily office operations, supporting HR processes, overseeing finance and inventory, and introducing improved internal systems to enhance efficiency.</div>
+          </div>
+
+          <div class="exp-item">
+            <div class="job">Part Time Coder / Webpage Expert — Freelance</div>
+            <div class="meta">Jun 2024 — Aug 2025 · Gujarat, India</div>
+            <div class="muted" style="margin-top:6px">Built incentive calculators and responsive webpages using HTML, CSS, and JavaScript for sales commissions and performance tracking systems.</div>
+          </div>
+
+          <div class="exp-item">
+            <div class="job">Field Executive — Kp excellence always</div>
+            <div class="meta">May 2023 — Oct 2024 · Greater Ahmedabad Area</div>
+            <div class="muted" style="margin-top:6px">Handled document collection, secure delivery of financial documents and maintained records.</div>
+          </div>
+
+          <div class="exp-item">
+            <div class="job">Customer Relationship Officer — Vetina India</div>
+            <div class="meta">Aug 2022 — Feb 2023 · Ahmedabad</div>
+            <div class="muted" style="margin-top:6px">Assisted customer communication, documentation and backend data entry.</div>
+          </div>
+
+          <div class="exp-item">
+            <div class="job">Junior Sales Executive — Drools</div>
+            <div class="meta">Sep 2021 — Aug 2022 · Ahmedabad</div>
+            <div class="muted" style="margin-top:6px">Promoted retail products and supported reporting.</div>
+          </div>
+
+          <div class="exp-item">
+            <div class="job">Telemarketer — airtel</div>
+            <div class="meta">Sep 2020 — Mar 2021 · Greater Ahmedabad Area</div>
+            <div class="muted" style="margin-top:6px">Worked in postpaid bill collection and call logging.</div>
+          </div>
+
+          <div class="exp-item">
+            <div class="job">Order Picker — JioMart Digital</div>
+            <div class="meta">Jan 2020 — Sep 2020 · Shahibaug, Ahmedabad</div>
+            <div class="muted" style="margin-top:6px">Picked and organized items for online orders using handheld devices.</div>
+          </div>
+
+        </div>
+
+        <div class="card-block" style="margin-top:14px;">
+          <div class="section-title"><h3>Education & Certifications</h3></div>
+          <ul style="margin:0;padding-left:18px;color:var(--muted);line-height:1.6">
+            <li>Advance Diploma in Computer Application — MSME Development Institute (Mar 2018 - Jul 2018)</li>
+            <li>LinkedIn Learning — Soft skills (Jun 2022)</li>
+            <li>Udemy — B2B Sales, Direct Sales, Time Management (2022)</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Right: Skills / Languages / Quick contact / Projects -->
+      <aside>
+        <div class="card-block">
+          <div class="section-title"><h3>Skills</h3></div>
+          <div class="skill-list" aria-hidden="false">
+            <span class="skill">Administration</span>
+            <span class="skill">Operations Management</span>
+            <span class="skill">HR Support</span>
+            <span class="skill">Finance & Inventory</span>
+            <span class="skill">HTML / CSS / JS</span>
+            <span class="skill">Webpage Design</span>
+            <span class="skill">Customer Relations</span>
+            <span class="skill">B2B Sales</span>
+            <span class="skill">Incentive Systems</span>
+          </div>
+        </div>
+
+        <div class="card-block">
+          <div class="section-title"><h3>Languages</h3></div>
+          <p class="muted" style="margin:0">Hindi (Full Professional) · Gujarati (Full Professional) · English (Limited Working)</p>
+        </div>
+
+        <div class="card-block" id="projects">
+          <div class="section-title"><h3>Web Work / Projects</h3></div>
+          <p class="muted" style="margin:0 0 10px 0; line-height:1.5">Freelance projects include incentive calculators and responsive webpages for sales and performance systems. <strong>Future-ready:</strong> This site can be extended to load project entries from a GitHub file (Markdown/JSON) so updates show automatically when you push new files to the repo.</p>
+          <a class="icon-btn" href="https://github.com/Caustic46" target="_blank" rel="noopener">View Code on GitHub</a>
+        </div>
+
+      </aside>
+    </main>
+
+    <!-- Footer: left text, right QR placeholder -->
+    <footer>
+      <div style="color:var(--muted);font-size:13px">
+        © <span id="yr"></span> Sandip Singh Sisodiya — Sr. Administrative &amp; HR Coordinator
+      </div>
+
+      <div style="display:flex;align-items:center;gap:12px">
+        <div class="muted" style="font-size:13px">Scan to open portfolio</div>
+
+        <!-- QR placeholder: Replace with an actual QR image when you have your hosted URL -->
+        <div class="qr-placeholder" id="qr">
+          QR PLACEHOLDER
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    // small script to set year
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    // NOTE: To replace the profile image:
+    // Option 1 (recommended): put an image file named "photo.jpg" next to this index.html in the repo,
+    // then uncomment and run:
+    // document.getElementById('profilePhoto').src = './photo.jpg';
+    //
+    // Option 2 (single-file embed): replace the src attribute of #profilePhoto with a base64 data URI of your image.
+    //
+    // To replace the QR placeholder:
+    // 1) After hosting this page and getting the public URL, generate a QR code image that points to that URL.
+    // 2) Upload the QR image to your repo (e.g., qr.png) and then replace the inner div with:
+    //    document.getElementById('qr').innerHTML = '<img src=\"./qr.png\" style=\"width:88px;height:88px;object-fit:cover;border-radius:6px;\" alt=\"QR\" />';
+    //
+    // Both replacements are simple edits you can do in GitHub after uploading.
+  </script>
+</body>
+  </html>
